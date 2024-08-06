@@ -8,7 +8,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   imports: [
 
     TypeOrmModule.forRoot({
-
       type: 'mysql',
       port: 3306,
       host: 'localhost',
@@ -17,7 +16,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'nestjs-oauth2-google',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true
-
     }),
 
     AuthModule,

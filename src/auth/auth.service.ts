@@ -14,7 +14,9 @@ export class AuthService {
 
 
         if (user) {
+
             return user
+
         }
 
         const newUser = this.userRepo.create({ email, displayName })
@@ -27,7 +29,7 @@ export class AuthService {
 
     async findUser(id: string) {
 
-        const user = await this.userRepo.findOne({ where: { id } })
+        await this.userRepo.findOne({ where: { id } })
 
         return id
 

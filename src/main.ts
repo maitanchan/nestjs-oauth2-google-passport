@@ -9,7 +9,21 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api')
 
-  app.use(session({ secret: 'secret', saveUninitialized: false, resave: false, cookie: { maxAge: 60000 } }))
+  app.use(session({
+
+    cookie: {
+
+      maxAge: 60000
+
+    },
+
+    secret: 'secret',
+
+    resave: false,
+
+    saveUninitialized: false,
+
+  }))
 
   app.use(passport.initialize())
 

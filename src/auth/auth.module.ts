@@ -15,17 +15,18 @@ import { SessionSerializer } from './serializer/session.serializer';
     PassportModule.register({ session: true }),
 
     ConfigModule.forRoot({
+
       isGlobal: true,
+
       envFilePath: '.env'
+
     }),
 
     TypeOrmModule.forFeature([User])
 
   ],
 
-  controllers: [
-    AuthController
-  ],
+  controllers: [AuthController],
 
   providers: [
 
